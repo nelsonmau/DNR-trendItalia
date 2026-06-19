@@ -2,6 +2,8 @@
 
 Analisi longitudinale dei dati italiani dal **Reuters Institute Digital News Report** (2021–2026).
 
+**Articolo pubblicato:** [Come è cambiata l'informazione in Italia](https://nelsonmau.substack.com/p/come-cambiata-linformazione-in-italia) — Substack
+
 ## Contenuto
 
 ```
