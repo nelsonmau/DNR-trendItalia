@@ -177,11 +177,51 @@ Quello che non era prevedibile nel 2021:
 
 ---
 
-## Una nota metodologica
+## Metodologia
 
-Tutti i dati di questo articolo provengono esclusivamente dalle sezioni Italia dei Reuters Institute Digital News Report dal 2021 al 2026. I dati di TV reach e online reach aggregati sono derivati dall'analisi delle chart PDF estratte in testo; dove non confermabili dal testo narrativo sono segnalati come "stimati da chart". I dati di brand trust sono disponibili come tabelle complete solo dal 2023.
+### Fonti primarie
 
-I grafici sono stati generati da dataset costruiti a partire dai documenti originali.
+L'analisi si basa esclusivamente sui **Reuters Institute Digital News Report** edizioni 2021, 2022, 2023, 2024, 2025 e 2026, pubblicati dal Reuters Institute for the Study of Journalism dell'Università di Oxford. Le sezioni Italia di ciascun report sono curate da Alessio Cornia (Dublin City University). I PDF originali non sono distribuiti con questo lavoro in quanto materiale copyrightato.
+
+### Estrazione del testo
+
+Il testo è stato estratto dai PDF tramite la libreria Python **PyMuPDF (fitz)**, pagina per pagina, con un'unica passata per documento. L'output grezzo è stato salvato in formato Markdown strutturato (cartella `extracted/`), con intestazioni di secondo livello (`## NomePaese`) generate automaticamente rilevando il pattern `Digital News Report YYYY | NomePaese` nel testo estratto.
+
+Le pagine originali della sola sezione Italia (narrativa + datasheet, 2 pagine per anno) sono state estratte anche come PDF autonomi nella cartella `pdf-italia/`, identificate cercando le stringhe `"ITALY"` + `"Population"` e delimitando la sezione fino all'inizio del paese successivo (Paesi Bassi in tutti gli anni considerati).
+
+### Parsing e costruzione dei dataset
+
+I dati numerici sono stati estratti con lettura manuale assistita del testo estratto, seguendo questo criterio per ciascun indicatore:
+
+**Dati confermati da testo narrativo** (priorità massima): valori citati esplicitamente nel testo descrittivo della sezione Italia, ad esempio `"print is at just 11%"` o `"Trust in news has fallen further [...] at 32%"`. Questi dati sono considerati certi.
+
+**Dati confermati da tabelle strutturate**: le tabelle di brand trust (% Trust / Neither / Don't Trust) sono presenti come testo tabulare nel PDF dal 2023 in poi e sono state estratte con un parser regex che identifica la sequenza `[nome brand] → [XX%] → [XX%] → [XX%]`. Per il 2021 e 2022 le tabelle non erano recuperabili in forma strutturata dall'estrazione testuale.
+
+**Dati derivati da grafici PDF** (priorità minore): i valori di reach settimanale aggregati per fonte (TV, qualsiasi online, social media) compaiono nel PDF come elementi grafici. Dall'estrazione testuale emergono come sequenze di percentuali non etichettate. L'attribuzione è stata fatta per inferenza contestuale: la sequenza `[TV%] [online%] [print%] [social%]` è stata identificata confrontando il valore di stampa cartacea (confermato da testo narrativo ogni anno) con la sua posizione nella sequenza, poi attribuendo le altre posizioni per coerenza. Questi valori sono indicati nel dataset con una nota.
+
+I dataset puliti sono disponibili nella cartella `data/csv/`:
+- `indicators_over_time.csv` — fiducia, fonti, pay, condivisione (2021–2026)
+- `platforms_for_news.csv` — uso settimanale per piattaforma (2021–2026)
+- `brand_trust.csv` — fiducia per brand (2023–2026)
+- `press_freedom.csv` — ranking e score RSF (2023–2026)
+
+### Limiti e avvertenze
+
+**Comparabilità temporale.** Il survey è condotto annualmente su campioni indipendenti (circa 2.000 rispondenti per l'Italia). Le variazioni anno su anno riflettono differenze campionarie oltre che tendenze reali. Il rapporto 2026 segnala che i dati italiani derivano da un *repoll* condotto nel marzo 2026 con un campione ridotto a 1.000 rispondenti, il che può influire sulla comparabilità con gli anni precedenti.
+
+**Brand trust: copertura parziale.** La lista di brand testati non è esaustiva né costante: `IlPost.it` compare per la prima volta nel 2024; `Porta a Porta` è presente solo nel 2023. Il delta di IlPost.it nei grafici è calcolato sul periodo 2024–2026, non 2023–2026 come per gli altri brand.
+
+**Dati mancanti.** La percentuale di chi condivide notizie non è disponibile per il 2024 e il 2026 (layout del datasheet modificato). Il dato di *news avoidance* per l'Italia è esplicitato solo dal 2026. L'ascolto podcast è misurato come consumo mensile fino al 2024, poi cambia in uso settimanale specifico per podcast di notizie: le due serie non sono direttamente confrontabili.
+
+**TV e online reach aggregati.** I valori di reach settimanale per TV e "qualsiasi online" sono derivati da grafici PDF e non da testo narrativo. Sono coerenti con le descrizioni qualitative presenti in ogni edizione ma vanno trattati come stime.
+
+### Visualizzazioni
+
+I grafici sono stati generati con **matplotlib** (Python) a partire dai dataset CSV. Il codice completo è disponibile in `data/build_datasets_and_charts.py`. Il raggruppamento dei brand giornalistici nei tre panel (forte calo / nella media / resistenti) è basato sulla variazione 2023→2026 rispetto alla media del gruppo (−4pp): forte calo ≤ −5pp, nella media tra −3pp e −5pp, resistenti > −3pp.
+
+### Riproducibilità
+
+Il repository pubblico `github.com/nelsonmau/DNR-trendItalia` contiene tutti gli script, i dataset CSV, i grafici e i testi estratti. I PDF originali non sono inclusi. Per riprodurre l'estrazione è necessario disporre dei PDF originali e di Python 3 con le librerie `pymupdf` e `matplotlib`.
 
 ---
 
