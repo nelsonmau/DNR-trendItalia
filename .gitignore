@@ -1,0 +1,7 @@
+# Source PDFs (copyrighted material, not redistributable)
+*.pdf
+
+# Python
+__pycache__/
+*.pyc
+.env
