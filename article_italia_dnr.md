@@ -30,14 +30,8 @@ ANSA rimane il brand più fidato in Italia per tutti e sei gli anni considerati 
 
 La carta stampata in Italia non è in crisi. È in declino strutturale, e i dati lo mostrano senza ambiguità.
 
-| Anno | Reach settimanale stampa |
-|------|--------------------------|
-| 2021 | 18% |
-| 2022 | 15% |
-| 2023 | 16% |
-| 2024 | 13% |
-| 2025 | 12% |
-| 2026 | 11% |
+📊 *[Grafico T1: Stampa cartacea — reach settimanale 2021–2026]*
+![Stampa cartacea: reach settimanale in Italia 2021–2026](data/charts/T1_stampa_cartacea.png)
 
 In cinque anni, la quota di italiani che usa la stampa cartacea per informarsi almeno una volta alla settimana è scesa dal 18% all'11%. Quasi la metà. Il rapporto 2024 notava che le edicole italiane sono scese a circa 13.500 — 2.700 in meno in quattro anni. Dal 2024, i bandi pubblici non sono più obbligati per legge a essere pubblicati sui giornali: una perdita stimata di circa 40 milioni di euro annui per il settore.
 
@@ -79,13 +73,8 @@ Poi, nel 2026, la tendenza si inverte bruscamente.
 
 📊 *[Grafico 3: Uso delle principali piattaforme per le notizie 2021–2026]*
 
-| Piattaforma | 2025 | 2026 | Variazione |
-|-------------|------|------|------------|
-| Facebook | 36% | 44% | **+8pp** |
-| Instagram | 22% | 31% | **+9pp** |
-| WhatsApp | 21% | 29% | **+8pp** |
-| YouTube | 20% | 21% | +1pp |
-| TikTok | 10% | 11% | +1pp |
+📊 *[Grafico T2: Piattaforme social per le notizie — confronto 2025 vs 2026]*
+![Piattaforme social per le notizie: confronto 2025 vs 2026](data/charts/T2_social_2025_2026.png)
 
 Il rapporto stesso lo descrive così: "After an 11pp fall since 2020, social media use for news is up 6pp." Non spiega le ragioni, ma il dato è netto. È possibile che eventi politici rilevanti nel periodo considerato (il referendum costituzionale del marzo 2026, le tensioni geopolitiche) abbiano spinto le persone a cercare informazioni anche su canali social. È anche possibile che l'algoritmo di Meta abbia favorito il contenuto informativo in quel periodo.
 
@@ -105,14 +94,8 @@ Tre comportamenti che dicono molto su come gli italiani si rapportano all'inform
 
 **Chi paga.** La percentuale di italiani che paga per le notizie online non è mai cresciuta in modo significativo e ha continuato a scendere:
 
-| Anno | % che paga per notizie online |
-|------|-------------------------------|
-| 2021 | 13% |
-| 2022 | 12% |
-| 2023 | 12% |
-| 2024 | 10% |
-| 2025 | 9% |
-| 2026 | 8% |
+📊 *[Grafico T3: % che paga per notizie online 2021–2026]*
+![% che paga per notizie online in Italia 2021–2026](data/charts/T3_pay_online_news.png)
 
 Questo nonostante anni di sforzi degli editori per convincere i lettori a sottoscrivere abbonamenti. Il Corriere della Sera aveva raggiunto 508.000 abbonati digitali nel 2022–2023. Il Post ha sviluppato un modello di membership solido. Fanpage ha lanciato la sua nel 2025. Eppure la quota di italiani che paga resta la più bassa del periodo osservato.
 
@@ -150,12 +133,8 @@ Il World Press Freedom Index di Reporters Without Borders è incluso nei report 
 
 📊 *[Grafico 5: Libertà di stampa RSF 2023–2026]*
 
-| Anno | Posizione | Score |
-|------|-----------|-------|
-| 2023 | 41° / 180 | 72,05 |
-| 2024 | 46° / 180 | 69,8 |
-| 2025 | 49° / 180 | 68,01 |
-| 2026 | 56° / 180 | 65,16 |
+📊 *[Grafico T4: World Press Freedom Index RSF 2023–2026]*
+![Italia nel World Press Freedom Index RSF 2023–2026](data/charts/T4_press_freedom_rank.png)
 
 In tre anni, l'Italia ha perso 15 posizioni nel ranking. Ogni anno peggiore del precedente.
 
