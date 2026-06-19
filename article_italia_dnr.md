@@ -111,7 +111,7 @@ Questo nonostante anni di sforzi degli editori per convincere i lettori a sottos
 
 La tabella di fiducia nei singoli brand è disponibile con dati completi dal 2023 al 2026. La tendenza generale è di calo quasi universale.
 
-📊 *[Grafico 6: Heatmap della fiducia nei brand giornalistici 2023–2026]*
+![Fiducia nei brand giornalistici italiani: slope chart 2023–2026](data/charts/B1_brand_trust_slope.png)
 
 Alcuni pattern rilevanti:
 
