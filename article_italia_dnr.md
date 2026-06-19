@@ -223,6 +223,72 @@ I grafici sono stati generati con **matplotlib** (Python) a partire dai dataset 
 
 Il repository pubblico `github.com/nelsonmau/DNR-trendItalia` contiene tutti gli script, i dataset CSV, i grafici e i testi estratti. I PDF originali non sono inclusi. Per riprodurre l'estrazione è necessario disporre dei PDF originali e di Python 3 con le librerie `pymupdf` e `matplotlib`.
 
+### Verifica dei claim
+
+Ogni affermazione fattuale dell'articolo è stata verificata confrontandola con il testo estratto delle sezioni Italia dei sei report. La tabella seguente riporta i risultati (✅ = confermato dai report; ⚠ = imprecisione o errore rispetto alla fonte).
+
+| # | Claim articolo | Sezione | Verifica | Note |
+|---|----------------|---------|----------|------|
+| 1 | Trust 2021: 40% (+11pp rispetto al 2020) | §1 | ✅ | DNR 2021: "40% (+11)" esplicito |
+| 2 | Trust 2022: 35% | §1 | ✅ | DNR 2022: "35% =33/46 markets" |
+| 3 | Trust 2023 e 2024: 34% per due anni | §1 | ✅ | DNR 2023: 34%, DNR 2024: 34% |
+| 4 | Trust 2025: 36% | §1 | ✅ | DNR 2025: "36% =27/48 markets" |
+| 5 | Trust 2026: 32% (−4pp) | §1 | ✅ | DNR 2026: "32% (−4)" |
+| 6 | Media globale 2026: 37% | §1 | ✅ | DNR 2026: "GLOBAL AVERAGE 37%" |
+| 7 | 2026 descrive un "ambiente mediatico altamente polarizzato" | §1 | ✅ | DNR 2026: "Italy's highly polarised media environment" verbatim |
+| 8 | ANSA brand più fidato per tutti e 6 gli anni, 74% nel 2026, 78% nel 2023 | §1 | ✅ | DNR 2023: ANSA 78%, DNR 2026: ANSA 74% |
+| 9 | Stampa cartacea: da 18% (2021) a 11% (2026) | §2 | ✅ | DNR 2021 chart: 18%, DNR 2026: "print is at just 11%" |
+| 10 | Edicole scese a ~13.500, −2.700 in quattro anni | §2 | ✅ | DNR 2024: "Nearly 2,700 news kiosks disappeared... total number dropping to approximately 13,500 by 2023" |
+| 11 | Bandi pubblici non più obbligati sui giornali da 2024, −40M€/anno | §2 | ✅ | DNR 2024: "ending from January 2024... losses in revenue estimated at around €40m annually" |
+| 12 | Piattaforme tech catturano >85% dei ricavi pubblicitari digitali | §2 | ✅ | DNR 2023, 2024, 2025, 2026 tutti confermano "85%" |
+| 13 | TV: da 76% (2021) a 62% (2026) di reach settimanale | §2 | ✅ | Chart 2021: 76%, chart 2026: 62% |
+| 14 | Streaming >21% dei ricavi TV in Italia nel 2026 | §2 | ✅ | DNR 2026: "now capturing more than 21% of TV revenues" |
+| 15 | Agnelli-Elkann compra la quota De Benedetti in GEDI (2021) | §3 | ✅ | DNR 2021 confermato |
+| 16 | GEDI vende L'Espresso (marzo 2022) | §3 | ✅ | DNR 2022/2023: "sold in March 2022" |
+| 17 | GEDI acquisisce 30% di Stardust (luglio 2022) | §3 | ✅ | DNR 2023: "its July 2022 purchase of 30% of Stardust" |
+| 18 | Giornalisti di Repubblica scioperano (2023) | §3 | ✅ | DNR 2023: "journalists at La Repubblica went on strike" (febbraio 2023) |
+| 19 | GEDI acquisisce cronachedispogliatoio.it (2024) | §3 | ✅ | DNR 2024: "online outlets based on social media distribution (cronachedispogliatoio.it)" |
+| 20 | Garante Privacy avvisa GEDI/OpenAI: collocato sotto "2025" | §3 | ⚠ | DNR 2025 scrive esplicitamente "In **late 2024**, Italy's data protection authority issued a warning to GEDI". L'articolo lo colloca nel 2025 |
+| 21 | GEDI vende Provincia Pavese, nuovo direttore a Repubblica (2025) | §3 | ✅ | DNR 2025 conferma entrambi |
+| 22 | GEDI venduta 100% ad Antenna (Kyriakou) a marzo 2026 | §3 | ✅ | DNR 2026: "in March 2026, it was 100% acquired by the Greek media group Antenna, controlled by the Kyriakou family" |
+| 23 | Deal include Repubblica, HuffPost Italia, Radio Deejay, Radio Capital, National Geographic Italia | §3 | ✅ (parziale) | DNR 2026 conferma; il report include anche **Limes** e la concessionaria **Manzoni**, non citate nell'articolo |
+| 24 | La Stampa venduta separatamente all'editore regionale SAE | §3 | ✅ | DNR 2026: "not the daily La Stampa, already sold separately to regional publisher SAE" |
+| 25 | Facebook per le notizie: 50% (2021) → 36% (2025) | §4 | ✅ | 2021: 50%, 2022: 45%, 2023: 44%, 2024: 37%, 2025: 36% |
+| 26 | WhatsApp per le notizie: 30% (2021) → 21% (2025) | §4 | ✅ | Sequenza confermata |
+| 27 | Social media in generale: 47% (2021) → 39% (2025) | §4 | ✅ | Chart data confermato |
+| 28 | 2026: social media per le notizie risale di 6pp | §4 | ✅ | DNR 2026: "social media use for news is up 6pp" |
+| 29 | Instagram +9pp in un anno nel 2026 | §4 | ✅ | DNR 2026: "31% (+9)" |
+| 30 | Instagram sorpassa WhatsApp "per la prima volta" nel 2026 | §4 | ⚠ | Instagram era già al 22% vs WhatsApp 21% nel **2025**: il sorpasso avviene in realtà nel 2025, non nel 2026 |
+| 31 | Twitter/X: "Dal 2023 non compare più tra le prime sei piattaforme" | §4 | ⚠ | X era **#5 al 13%** nel 2024 (DNR 2024). Scompare davvero dal 2025, non dal 2023 |
+| 32 | TikTok: "8% nel 2023, poi 9%, 10%, 11% nel 2026" | §4 | ⚠ | Sequenza reale: 8% (2023), **10%** (2024), 10% (2025), 11% (2026). Nessun anno al 9% |
+| 33 | Pay: da 13% (2021) a 8% (2026) | §5 | ✅ | 2021: 13%, 2022: 12%, 2023: 12%, 2024: 10%, 2025: 9%, 2026: 8% |
+| 34 | Corriere 508.000 abbonati digitali | §5 | ✅ | DNR 2023: "508,000 digital subscribers" |
+| 35 | Fanpage lancia membership nel 2025 | §5 | ✅ | DNR 2025 conferma |
+| 36 | Share notizie: 40% (2021) → 26% (2025), non disponibile 2024 e 2026 | §5 | ✅ | 2021: 40%, 2022: 36%, 2023: 34%, 2025: 26% — 2024 e 2026 assenti nel datasheet |
+| 37 | News avoidance 36% (+3pp) nel 2026 | §5 | ✅ | DNR 2026: "36% (+3) AVOID THE NEWS sometimes/often" |
+| 38 | SkyTG24: 71% (2023) → 64% (2026) | §6 | ✅ | 71%, 69%, 67%, 64% |
+| 39 | Il Sole 24 Ore: 69% (2023) → 64% (2026) | §6 | ✅ | 69%, 67%, 67%, 64% |
+| 40 | RAI: 63% (2023) → 56% (2026) | §6 | ✅ | 63%, 58%, 58%, 56% |
+| 41 | Tg La7: 63% (2023) → 58% (2026) | §6 | ✅ | 63%, 62%, 61%, 58% |
+| 42 | La Repubblica: 59% (2023) → 55%, stabile ultimi due anni | §6 | ✅ | 59%, 58%, 55%, 55% |
+| 43 | Fanpage e Libero meno fidati al 41% nel 2026, "Don't Trust" 29% e 27% | §6 | ✅ | Fanpage: 41% trust, DT 29%; Libero: 41% trust, DT 27% |
+| 44 | Libertà di stampa: −15 posizioni in 3 anni, ogni anno peggio | §7 | ✅ | 41° (2023), 46° (2024), 49° (2025), 56° (2026) → −15 posizioni |
+| 45 | AGCOM: equa remunerazione Meta-GEDI, ~9-10M€ | §8 | ✅ (con caveat) | DNR 2026 conferma, ma precisa: "AGCOM did not publish the figures but €9–10m for Meta **appeared in some press reports**" — la cifra è da comunicati stampa, non da AGCOM |
+| 46 | Meta impugna, caso rinviato alla Corte di Giustizia UE | §8 | ✅ | DNR 2026 conferma |
+| 47 | Presidente AGCOM annuncia segnalazione Google AI Mode alla CE (febbraio 2026) | §8 | ✅ | DNR 2026: "In February 2026 the AGCOM President said he was preparing to report Google AI Mode" |
+| 48 | Legge AI italiana approvata fine 2025 | §8 | ✅ | DNR 2026 conferma |
+| 49 | AI chatbot per le notizie: 6% nel 2026 (+2pp vs 2025) | §8 | ✅ | DNR 2026: "AI chatbots 6% (+2)"; DNR 2025: "AI chatbots 4%" |
+| 50 | AGCOM codice condotta influencer luglio 2025 | §8 | ✅ | DNR 2026: "In July 2025, AGCOM adopted a new code of conduct for 'significant' influencers" |
+| 51 | Meloni su Pulp Podcast, condotto da rapper/YouTuber | §8 | ✅ | DNR 2026 conferma verbatim |
+| 52 | Substack: Feltri e Lucarelli con audience a pagamento | §8 | ✅ | DNR 2026 conferma verbatim |
+
+**4 imprecisioni rilevate (righe 20, 30, 31, 32):**
+
+- **Riga 20 — GEDI/OpenAI:** l'avviso del Garante Privacy è datato "late 2024" nel DNR 2025, non 2025 come indicato nella cronologia GEDI.
+- **Riga 30 — Instagram vs WhatsApp:** il sorpasso di Instagram su WhatsApp avviene già nel 2025 (22% vs 21%), non per la prima volta nel 2026.
+- **Riga 31 — Twitter/X:** X era ancora in top 6 nel 2024 al 13% (#5). La scomparsa definitiva è dal 2025, non dal 2023.
+- **Riga 32 — TikTok:** la sequenza corretta è 8% → 10% → 10% → 11% (2023–2026). Non esiste un anno al 9%.
+
 ---
 
 *Fonti primarie: Reuters Institute Digital News Report 2021, 2022, 2023, 2024, 2025, 2026 — sezione Italia. Autore delle sezioni Italia: Alessio Cornia, Dublin City University.*
