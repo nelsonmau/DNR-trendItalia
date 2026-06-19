@@ -113,6 +113,8 @@ La tabella di fiducia nei singoli brand è disponibile con dati completi dal 202
 
 ![Fiducia nei brand giornalistici italiani: slope chart 2023–2026](data/charts/B1_brand_trust_slope.png)
 
+![Heatmap della fiducia nei brand giornalistici 2023–2026](data/charts/06_brand_trust_heatmap.png)
+
 Alcuni pattern rilevanti:
 
 - **ANSA** rimane stabile al 74–78%: la fonte percepita come più neutrale e professionale.
